@@ -1,9 +1,11 @@
 .app {
   background: #f1f1f1;
   display: grid;
-  grid-template-areas: "header" "contenido" "rodapie";
+  grid-template-areas: "header" "contenido" "footer";
   grid-template-columns: auto;
   grid-template-rows: 50px 100vh auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .encabezado {
@@ -13,6 +15,9 @@
   padding: 0 2rem;
 }
 
+.encabezado .menu {
+  padding: 1rem;
+}
 .menu__link {
   color: #333333;
   padding: 0.5rem 1rem;
@@ -25,7 +30,13 @@
 
 .contenido {
   grid-area: contenido;
+  padding: 0 2rem;
 }
+
 .rodapie {
-  grid-area: rodapie;
+  background: #f1f1f1;
+  color: #333333;
+  grid-area: footer;
+  padding: 1rem;
+  text-align: center;
 }
